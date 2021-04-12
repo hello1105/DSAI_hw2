@@ -24,7 +24,7 @@ if __name__ == "__main__":
     for i in range(1, len(training_data)):
         table[i-1] = (training_data[i][3] - training_data[i-1][3]) / training_data[i][3]
     
-    # 根據table中的漲跌資料，隨機預測未來N天的股價，並計算最大、最小值，重複999次
+    # 根據table中的漲跌資料與testing data第一天的股價，隨機產生未來N天的股價，並計算最大、最小值，重複999次
     pMax = np.array([0.0] * 999)
     pMin = np.array([0.0] * 999)
     for n in range(999):
